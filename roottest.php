@@ -11,6 +11,12 @@ class testModule
 		echo "<font color=red>$func Failed!! $error</font>";
 	}
 
+	public function showAll(){
+		foreach (get_class_methods(get_called_class()) as $c){
+			echo "<br>".$c;
+		}
+	}
+
 	public function startTesting(){
 
 		$childClass = get_called_class(); // User-test-class name
